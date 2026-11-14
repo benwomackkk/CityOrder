@@ -22,6 +22,7 @@ struct Flight {
 
 vector<vector<Flight>> graph;
 vector<bool> visited;
+
 vector<int> currentRoute;
 vector<int> bestRoute;
 
@@ -66,13 +67,13 @@ bool processData(ifstream& input, int dataSet) {
 
     int numberOfCities;
 
-    if (!(input >> numberOfCities) ||
-        numberOfCities < 2 || numberOfCities > 30) {
+    if (!(input >> numberOfCities) || numberOfCities < 2 || numberOfCities > 30) {
         cout << "Invalid number of cities or file format." << endl;
         return false;
     }
 
     vector<string> cities(numberOfCities);
+    
     unordered_map<string, int> cityNumber;
 
     //---------numberOfCities---------
@@ -93,8 +94,7 @@ bool processData(ifstream& input, int dataSet) {
 
     int numberOfFlights;
 
-    if (!(input >> numberOfFlights) ||
-        numberOfFlights < 1 || numberOfFlights > 82) {
+    if (!(input >> numberOfFlights) || numberOfFlights < 1 || numberOfFlights > 82) {
         cout << "Invalid number of flights." << endl;
         return false;
     }
@@ -102,6 +102,7 @@ bool processData(ifstream& input, int dataSet) {
     for (int i = 0; i < numberOfFlights; i++) {
 
         string city1, city2;
+       
         int distance;
 
         if (!(input >> city1 >> city2 >> distance)) {
@@ -110,12 +111,12 @@ bool processData(ifstream& input, int dataSet) {
         }
 
         
-        if (cityNumber.find(city1) == cityNumber.end() ||
-            cityNumber.find(city2) == cityNumber.end()) {
+        if (cityNumber.find(city1) == cityNumber.end() || cityNumber.find(city2) == cityNumber.end()) {
             cout << "Flight contains an unknown city." << endl;
             return false;
         }
 
+        
         int first = cityNumber[city1];
         int second = cityNumber[city2];
 
@@ -180,8 +181,7 @@ int main() {
 
             int numberOfDataSets;
 
-            if (!(input >> numberOfDataSets) ||
-                numberOfDataSets < 1 || numberOfDataSets > 11) {
+            if (!(input >> numberOfDataSets) || numberOfDataSets < 1 || numberOfDataSets > 11) {
                 cout << "Invalid data file." << endl;
             }
             else {
