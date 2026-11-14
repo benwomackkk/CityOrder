@@ -1,0 +1,53 @@
+43
+SanFrancisco
+NewYork
+LosAngeles 3
+SanFrancisco LosAngeles 383
+SanFrancisco NewYork 2905
+LosAngeles NewYork 2789 5
+Austin
+Istanbul
+Calcutta
+NewYork
+London
+10
+Austin Istanbul 6500
+Austin Calcutta 8773
+Austin NewYork 1513
+Austin London 4921
+Istanbul Calcutta 3652
+Istanbul NewYork 5020
+Istanbul London 1556
+Calcutta NewYork 7929
+Calcutta London 4853
+NewYork London 3465 4
+Reykjavik
+Aarhus
+Geneva
+Budapest 5
+Reykjavik Aarhus 1515
+Reykjavik Geneva 2379
+Reykjavik Budapest 2443
+Aarhus Budapest 933
+Geneva Budapest 787
+10abcdef
+COSC 2436 F26
+5
+g
+h
+i
+j
+13
+a b 6
+b d 43
+b c 8
+c d 9
+d e 10
+e f 33
+f g 10
+f i 3
+f j 3
+g h 39
+h i 38
+i j 39
+j a 38
